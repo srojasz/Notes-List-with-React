@@ -4,7 +4,7 @@ const Input = ({handleNewNote, name, placeholder, type, label, element, value}) 
  const htmlprops = { name, placeholder, type, value };
   const inputClasses = {
       width: "350px",
-      height: "30px",
+      height: "38px",
       border: "3px solid aquamarine",
       borderRadius: "5px 0 0 5px",
       outline: "none",
