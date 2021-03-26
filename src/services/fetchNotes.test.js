@@ -3,7 +3,12 @@ import { fetchNotes } from "./fetchNotes";
 describe("Get notes", () => {
   test("get the first 10 notes", async () => {
     const notes = [
-      { userId: 1, id: 1, title: "delectus aut autem", completed: false },
+      {
+          userId: 1, 
+          id: 1, 
+          title: "delectus aut autem",
+          completed: false
+      },
       {
         userId: 1,
         id: 2,
