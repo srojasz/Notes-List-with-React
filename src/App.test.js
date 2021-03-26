@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import Notes from './components/Notes';
 import Note from './components/Note';
-
+import Form from './components/Form';
 
 
 describe("Notes", () => {
@@ -20,6 +20,17 @@ describe("Note", () => {
     const handleDeleteNote = jest.fn();
     render(
       <Note handleDeleteNote={handleDeleteNote} note={note} />
+    );
+  });
+});
+
+describe("Form", () => {
+  test("renders Form component", () => {
+    const newNote = {userId: 1, id: 1, title: "delectus aut autem", completed: false};
+    const handleNewNote = jest.fn();
+    const handleSubmit = jest.fn();
+    render(
+      <Form value={newNote} handleNewNote={handleNewNote} handleSubmit={handleSubmit} />
     );
   });
 });
