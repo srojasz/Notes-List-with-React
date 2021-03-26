@@ -72,7 +72,7 @@ function App() {
 
   return (
     <div style={style}>
-        <Notes notes={notes} handleDeleteNote={handleDeleteNote} />
+        {notes.length === 0 ? 'Please add a note' : <Notes notes={notes} handleDeleteNote={handleDeleteNote} />}
         <Form value={newNote} handleNewNote={handleNewNote} handleSubmit={handleSubmit} />
         {loading ? <Loader /> : null}
     </div>
