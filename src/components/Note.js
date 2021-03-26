@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Note = ({note, handleDeleteNote}) => {
+const Note = ({note, handleDelete}) => {
     const {id, title } = note;
     const contentStyle = {
         height: "30px",
@@ -33,7 +33,7 @@ return (
         <div id={id} style={contentStyle}>
             {title}
         </div>
-        <p id={id} style={actionStyles} onClick={handleDeleteNote}>Borrar</p>
+        <p id={id} style={actionStyles} onClick={handleDelete}>Borrar</p>
     </section>
       
 )

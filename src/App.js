@@ -23,13 +23,13 @@ function App() {
     }, []);
 
     // Events handlers.
-    const handleNewNote = (ev) => {
+    const onChange = (ev) => {
         ev.preventDefault();
         const newNote = ev.target.value;
         addNewNote(newNote);
     }
 
-    const handleDeleteNote = (ev) => {
+    const handleDelete = (ev) => {
         ev.preventDefault();
         const noteClicked = parseInt(ev.target.id);
         if (notes.find((note) => note.id === noteClicked)) {
@@ -72,8 +72,8 @@ function App() {
 
   return (
     <div style={style}>
-        {notes.length === 0 ? 'Please add a note' : <Notes notes={notes} handleDeleteNote={handleDeleteNote} />}
-        <Form value={newNote} handleNewNote={handleNewNote} handleSubmit={handleSubmit} />
+        {notes.length === 0 ? 'Please add a note' : <Notes notes={notes} handleDelete={handleDelete} />}
+        <Form value={newNote} onChange={onChange} handleSubmit={handleSubmit} />
         {loading ? <Loader /> : null}
     </div>
   );

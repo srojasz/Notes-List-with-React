@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-const Input = ({handleNewNote, name, placeholder, type, label, element, value}) => {
+const Input = ({onChange, name, placeholder, type, label, element, value}) => {
  const htmlprops = { name, placeholder, type, value };
   const inputClasses = {
       width: "350px",
@@ -18,7 +18,7 @@ const Input = ({handleNewNote, name, placeholder, type, label, element, value}) 
       inputElement = (
         <textarea
           style={inputClasses}
-          onChange={handleNewNote}
+          onChange={onChange}
           {...htmlprops}
         />
       );
@@ -27,7 +27,7 @@ const Input = ({handleNewNote, name, placeholder, type, label, element, value}) 
       inputElement = (
         <input
           style={inputClasses}
-          onChange={handleNewNote}
+          onChange={onChange}
           {...htmlprops}
         />
       );

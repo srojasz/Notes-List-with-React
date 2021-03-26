@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import Note from './Note'
 
-const Notes = ({notes, handleDeleteNote }) => {
+const Notes = ({notes, handleDelete }) => {
     const titleStyle = {
         textAlign : "center",
     };
@@ -14,7 +14,7 @@ return (
     <Fragment>
         <h2 style={titleStyle}>Notas</h2>
         <ul style={listStyles}>
-        {notes.map(((note, key) => <Note key={key} note={note} handleDeleteNote={handleDeleteNote} />))}
+        {notes.map(((note, key) => <Note key={key} note={note} handleDelete={handleDelete} />))}
         </ul>
     </Fragment>
     )
