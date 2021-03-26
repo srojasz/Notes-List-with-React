@@ -2,6 +2,8 @@ import { render } from '@testing-library/react';
 import Notes from './components/Notes';
 import Note from './components/Note';
 import Form from './components/Form';
+import Input from './components/Input';
+import Submit from './components/Submit';
 
 
 describe("Notes", () => {
@@ -31,6 +33,25 @@ describe("Form", () => {
     const handleSubmit = jest.fn();
     render(
       <Form value={newNote} handleNewNote={handleNewNote} handleSubmit={handleSubmit} />
+    );
+  });
+});
+
+describe("Input", () => {
+  test("renders Input component", () => {
+    const handleNewNote = jest.fn();
+    const value = "Nueva nota";
+    render(
+       <Input handleNewNote={handleNewNote} type="text" name="new-note" element="input" placeholder="Añade una nueva nota" value={value}/>
+    );
+  });
+});
+
+describe("Submit", () => {
+  test("renders Submit component", () => {
+    
+    render(
+       <Submit />
     );
   });
 });
