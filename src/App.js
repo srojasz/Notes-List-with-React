@@ -53,8 +53,6 @@ function App() {
         addNewNote("");
     }
 
-    console.log(notes)
-
     // Styles.
     const style = {
         display: 'flex',

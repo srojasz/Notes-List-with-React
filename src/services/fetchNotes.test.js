@@ -1,6 +1,6 @@
 import { fetchNotes } from "./fetchNotes";
 
-describe("Handle notes", () => {
+describe("Get notes", () => {
   test("get the first 10 notes", async () => {
     const notes = [
       { userId: 1, id: 1, title: "delectus aut autem", completed: false },
