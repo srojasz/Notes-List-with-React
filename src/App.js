@@ -47,7 +47,11 @@ function App() {
         }
         
         createNewNote(newNoteContract).then((newNote) => {
-            setNotes((prevNotes) => prevNotes.concat(newNote));
+            if (newNote.title !== "") {
+                setNotes((prevNotes) => prevNotes.concat(newNote));
+            } else {
+                alert("No puedes dejar este campo vacío");
+            }
         }).catch((error) => console.error(error));
 
         addNewNote("");
